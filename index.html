@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barbearia Navalha de Ouro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#" class="logo">Navalha<span> de Ouro</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Menu">☰</button>
+      <ul id="menu">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+        <li><a href="#agendar">Agendar</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Desde 2015</p>
+    <h1>Tradição em cada corte, precisão em cada detalhe.</h1>
+    <p>Barbearia clássica com técnicas modernas. Ambiente reservado, atendimento individual, e um café que você não vai esquecer.</p>
+    <div class="hero-actions">
+      <a href="#agendar" class="btn btn-solid">Agendar horário</a>
+      <a href="#servicos" class="btn">Ver serviços</a>
+    </div>
+  </div>
+</section>
+
+<section id="servicos">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">O que fazemos</p>
+      <h2>Serviços</h2>
+    </div>
+    <div class="services" id="services-grid"></div>
+  </div>
+</section>
+
+<section id="equipe">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Quem cuida de você</p>
+      <h2>Nossos barbeiros</h2>
+    </div>
+    <div class="team" id="team-grid"></div>
+  </div>
+</section>
+
+<section id="agendar">
+  <div class="wrap">
+    <div class="booking">
+      <div class="booking-info">
+        <div class="sec-head">
+          <p class="eyebrow">Reserve seu horário</p>
+          <h2>Agende agora</h2>
+        </div>
+        <p>Preencha o formulário e confirmamos pelo WhatsApp em até 10 minutos.</p>
+        <ul class="hours" id="hours-list"></ul>
+      </div>
+
+      <form id="booking-form" novalidate>
+        <div class="field">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
+          <small class="err" data-err="nome"></small>
+        </div>
+
+        <div class="field">
+          <label for="telefone">Telefone / WhatsApp</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" maxlength="15">
+          <small class="err" data-err="telefone"></small>
+        </div>
+
+        <div class="field">
+          <label for="servico">Serviço</label>
+          <select id="servico" name="servico">
+            <option value="">Selecione...</option>
+          </select>
+          <small class="err" data-err="servico"></small>
+        </div>
+
+        <div class="field">
+          <label for="barbeiro">Barbeiro</label>
+          <select id="barbeiro" name="barbeiro">
+            <option value="">Sem preferência</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="data">Data</label>
+          <input type="date" id="data" name="data">
+          <small class="err" data-err="data"></small>
+        </div>
+
+        <div class="field">
+          <label for="horario">Horário</label>
+          <input type="time" id="horario" name="horario">
+          <small class="err" data-err="horario"></small>
+        </div>
+
+        <div class="field">
+          <label for="obs">Observações (opcional)</label>
+          <textarea id="obs" name="obs" placeholder="Referência, alergia, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-solid">Enviar pelo WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer id="contato">
+  <div class="wrap">
+    <div class="footer-logo">NAVALHA DE OURO</div>
+    <p id="footer-endereco"></p>
+    <p id="footer-contato"></p>
+    <div class="footer-social">
+      <a href="#" target="_blank" rel="noopener">Instagram</a>
+      <a href="#" target="_blank" rel="noopener">Facebook</a>
+      <a href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <p class="copyright">© <span id="ano"></span> Barbearia Navalha de Ouro. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
